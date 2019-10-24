@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalabre=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Autoportrait de Lucas R. MARTINY - CVG 3A</title>
+    <!--Page loading progress bar-->
+    <script src="./pace.min.js">pace.start()</script>
+    <link rel="stylesheet" href="pace.css">
+    <!--Fonts stylesheets-->
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/Fira_Sans.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/Fira_Code.css">
+    <link rel="stylesheet" type="text/css" href="./assets/fonts/Zilla_Slab.css">
+    <link rel="stylesheet" type="text/css" href="https://use.typekit.net/fnq4mlg.css">
+    <!--First stylesheets-->
+    <link rel="stylesheet" type="text/css" href="./reset.min.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/frames.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/graphics.css">
+    <!--Favicons-->
+    <!--Libs and Scripts launching-->
+    <script src="./assets/libs/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./assets/libs/jquery/jquery.scrollTo.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./assets/libs/gsap/TweenMax.min.js"></script>
+    <script src="./assets/libs/gsap/SplitTextPlugin.obf2.min.js"></script>
+    <script src="./assets/libs/simplemediaplayer/simplemediaplayer.js"></script>
+    <script src="./assets/libs/threejs/three.min.js"></script>
+    <script src="./assets/libs/phaser/phaser.js"></script>
+</head>
+<body>
+    <h1 style="display: none;"><a rel="author" href="https://www.behance.net/latten"><strong>Lucas R. MARTINY</strong></a></h1>
+    <div style="display: flex;" id="preface-container">
+        <div id="title"><img src="./assets/images/graphics/autoportrait_title.min.svg"></div>
+            <img>
+        <div id="preface">
+            <div id="prefaceFrame">
+                <p class="prefaceText">Dans un but d’une réalisation d’un auto-portrait : les caractéristique physique - tels que le style, type, les visuels, supports, formes et couleurs-  doivent se lier à mes caractéristiques mentales - mon caractère, mon état psychologique, mon rapport aux autres, mes pensés, rêvés, cauchemar mes défauts et mes vertus.</p>
+                <button onclick="prefaceAnimation();">Cliquez ici pour commencer...</button>
+                <div id="fallingMan"><img src="./assets/images/graphics/falling_man.svg"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/scripts/preface.js"></script>
+    <div class="backgroundColor-container" id="backgroundColor-container"><div class="backgroundColor" id="backgroundColor"></div></div>
+    <div id="app-container" onscroll="setScrollInfo()" style="display: none;">
+        <div class="slider-anchors-container"><div class="slider-anchors"></div><div class="slider-anchors"></div><div class="slider-anchors"></div><div class="slider-anchors"></div></div>
+        <div class="game-container">
+            <div id="app-frames-top">
+                <div id="video01"><video muted class="players" id="mplayer01" onended="actualPlayer = 01; $('#game').fadeTo('slow', 1) ">
+                        <source src="./assets/videos/video01.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="video02"><video muted class="players" id="mplayer02" onended="frameToggle(2);">
+                        <source src="./assets/videos/video02.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="video03"><video muted class="players" id="mplayer03" onended="frameToggle(5);">
+                        <source src="./assets/videos/video03.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="video04"><video muted class="players" id="mplayer04" onended="frameToggle(8);">
+                        <source src="./assets/videos/video04.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="video05"><video muted class="players" id="mplayer05" onended="frameToggle(9);">
+                        <source src="./assets/videos/video05.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="video06"><video muted class="players" id="mplayer06">
+                        <source src="./assets/videos/video06.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div id="frame01">
+                    <h3 style="display: none;">L'Albatros</h3>
+                    <p>Souvent, pour s’amuser, les hommes d’équipage
+                        <br>Prennent des albatros, vastes oiseaux des mers,
+                        <br>Qui suivent, indolents compagnons de voyage,
+                        <br>Le navire glissant sur les gouffres amers.</p>
+                    <p>À peine les ont-ils déposés sur les planches,
+                        <br>Que ces rois de l'azur, maladroits et honteux,
+                        <br>Laissent piteusement leurs grandes ailes blanches
+                        <br>Comme des avirons traîner à côté d'eux.</p>
+                    <p>Ce voyageur ailé, comme il est gauche et veule !
+                        <br>Lui, naguère si beau, qu'il est comique et laid !
+                        <br>L'un agace son bec avec un brûle-gueule,
+                        <br>L'autre mime, en boitant, l'infirme qui volait !</p>
+                    <p>Le Poète est semblable au prince des nuées
+                        <br>Qui hante la tempête et se rit de l'archer ;
+                        <br>Exilé sur le sol au milieu des huées,
+                        <br>Ses ailes de géant l'empêchent de marcher.</p>
+                    <a rel="author" href="https://fr.wikipedia.org/wiki/Charles_Baudelaire">Charle BAUDELAIRE, ‎1861.</a>
+                </div>
+                <div id="frame02">
+
+                </div>
+            </div>
+            <div id="game"></div>
+            <div id="app-frames-bottom">
+                <!--Graphics-->
+                <div class="svgDynamic" id="gc01"></div>
+                <div class="svgDynamic" id="gc02"></div>
+                <div class="svgDynamic" id="gc03"></div>
+                <div class="svgDynamic" id="gc04"></div>
+                <div class="svgDynamic" id="gc05"></div>
+                <div class="svgDynamic" id="gc06"></div>
+                <div class="svgDynamic" id="gc07"></div>
+                <!--Noiseblocks-->
+                <img class="noiseblocks" id="nb01" src="./assets/images/backgrounds/noiseblocks/noiseblock_01_246x308.jpg">
+                <img class="noiseblocks" id="nb02" src="./assets/images/backgrounds/noiseblocks/noiseblock_02_246x136.jpg">
+                <img class="noiseblocks" id="nb03" src="./assets/images/backgrounds/noiseblocks/noiseblock_03_148x136.jpg">
+                <img class="noiseblocks" id="nb04" src="./assets/images/backgrounds/noiseblocks/noiseblock_04_246x308.jpg">
+                <img class="noiseblocks" id="nb05" src="./assets/images/backgrounds/noiseblocks/noiseblock_05_428x162.jpg">
+                <img class="noiseblocks" id="nb06" src="./assets/images/backgrounds/noiseblocks/noiseblock_06_428x387.jpg">
+            </div>
+        </div>
+        <nav id="scrollercontainer"><button class="followPlayerButton" onclick="followPlayerButton(); scrollFollowPlayer('player0' + actualPlayer);">Centrer joueur</button><input type="range" min="1" max="100" value="50" class="slider" id="scrollInfo"><input type="range" min="1" max="100" value="50" class="slider" id="scroller" onmousedown="mouseDownScroller()" onmouseup="mouseUpScroller()"><button class="muteAllButton" onclick="muteAll(), window.alert('Ya pas de son, dézo')">Couper le son</button></nav>
+    </div>
+    <!--Game  script-->
+    <script src="./assets/scripts/frameAnimation/frame_setup.js"></script>
+    <script src="./assets/scripts/frameAnimation/frame_transitions.js"></script>
+    <script src="./assets/scripts/frameAnimation/frame_animations.js"></script>
+    <script src="./assets/scripts/game/game_preload.js"></script>
+    <script src="./assets/scripts/game/game_functions.js"></script>
+    <script src="./assets/scripts/game/game_create.js"></script>
+    <script src="./assets/scripts/game/game_playerAnimations.js"></script>
+    <script src="./assets/scripts/game/game_update.js"></script>
+    <script src="./assets/scripts/game/game_setup.js"></script>
+    <!--Utilities, ratio & scrollbar scripts-->
+    <script src="./assets/scripts/utilities/game_cssRatio.js"></script>
+    <script src="./assets/scripts/utilities/containers_resize_byWidth.js"></script>
+    <script src="./assets/scripts/utilities/width_scroller.js"></script>
+    <script>window.addEventListener("load", gameContainerResize); window.addEventListener("load", setRatioFromPhaser); followPlayerButton() ; setBackgroundColor(0); document.getElementById("app-container").scrollLeft = 0 ;</script>
+</body>
+</html>

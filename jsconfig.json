@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "target": "es6"
+  },
+  "include": ["./assets/dev_libs/pixi.js", "/usr/local/lib/node_modules"]
+}

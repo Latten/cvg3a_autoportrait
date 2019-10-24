@@ -1,0 +1,88 @@
+#nb01 {
+    width:calc(246 * var(--ratio));
+    height:calc(308 * var(--ratio));
+    left:calc(2260 * var(--ratio));
+    top:calc(820 * var(--ratio));
+}
+#nb02 {
+    width:calc(246 * var(--ratio));
+    height:calc(136 * var(--ratio));
+    left:calc(4290 * var(--ratio));
+    top:calc(280 * var(--ratio));
+}
+#nb03 {
+    width:calc(148 * var(--ratio));
+    height:calc(136 * var(--ratio));
+    left:calc(5020 * var(--ratio));
+    top:calc(840 * var(--ratio));
+}
+#nb04 {
+    width:calc(246 * var(--ratio));
+    height:calc(308 * var(--ratio));
+    left:calc(640 * var(--ratio));
+    top:calc(100 * var(--ratio));
+}
+#nb05 {
+    width:calc(428 * var(--ratio));
+    height:calc(162 * var(--ratio));
+    left:calc(6840 * var(--ratio));
+    top:calc(920 * var(--ratio));
+}
+#nb06 {
+    width:calc(428 * var(--ratio));
+    height:calc(387 * var(--ratio));
+    left:calc(5840 * var(--ratio));
+    top:calc(126 * var(--ratio));
+}
+
+#gc01 {
+    width:calc(480 * var(--ratio));
+    height:calc(320 * var(--ratio));
+    background-image: url('../images/graphics/albatros_title.min.svg');
+    left:calc(2010 * var(--ratio));
+    top:calc(42 * var(--ratio));
+}
+
+#gc02 {
+    width:calc(300 * var(--ratio));
+    height:calc(340 * var(--ratio));
+    background-image: url('../images/graphics/mot01_curisoité.min.svg');
+    left:calc(2810 * var(--ratio));
+    top:calc(42 * var(--ratio));
+}
+#gc03 {
+    width:calc(210 * var(--ratio));
+    height:calc(160 * var(--ratio));
+    background-image: url('../images/graphics/mot02_ennui.min.svg');
+    left:calc(3110 * var(--ratio));
+    top:calc(100 * var(--ratio));
+}
+#gc04 {
+    width:calc(300 * var(--ratio));
+    height:calc(210 * var(--ratio));
+    background-image: url('../images/graphics/mot03a_credule.min.svg');
+    left:calc(3910 * var(--ratio));
+    top:calc(900 * var(--ratio));
+}
+#gc05 {
+    width:calc(480 * var(--ratio));
+    height:calc(340 * var(--ratio));
+    background-image: url('../images/graphics/mot03b_anxiete.min.svg');
+    left:calc(4210 * var(--ratio));
+    top:calc(900 * var(--ratio));
+}
+#gc06 {
+    width:calc(440 * var(--ratio));
+    height:calc(110 * var(--ratio));
+    background-image: url('../images/graphics/mot04_concentre.min.svg');
+    left:calc(4610 * var(--ratio));
+    top:calc(100 * var(--ratio));
+}
+#gc07 {
+    width:calc(250 * var(--ratio));
+    height:calc(250 * var(--ratio));
+    background-image: url('../images/graphics/mot05_solitude.min.svg');
+    left:calc(7680 * var(--ratio));
+    top:calc(800 * var(--ratio));
+    transform: rotate(45deg)
+}

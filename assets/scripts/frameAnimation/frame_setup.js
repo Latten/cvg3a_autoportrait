@@ -1,0 +1,11 @@
+var frameNumberDone01 = null ;
+var frameNumberDone02 = null ;
+var frameNumberDone03 = null ;
+var frameNumberDone04 = null ;
+var frameNumberDone05 = null ;
+var frameNumberDone06 = null ;
+var frameNumberDone07 = null ;
+var frameNumberDone08 = null ;
+var frameNumberDone09 = null ;
+var frameNumberDone10 = null ;
+var frameNumberDone11 = null ;
