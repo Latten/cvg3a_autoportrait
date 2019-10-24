@@ -65,7 +65,7 @@ function create ()
         setOverlapZone("F07", "4080, 620", "20, 200", "player02", "function() {frameToggle(07)}")
 
         setOverlapZone("F10", "6010, 680", "20, 200", "player03", "function() {frameToggle(10)}")
-        setOverlapZone("F11", "6890, 680", "20, 200", "player03", "function() {frameToggle(11)}")
+        setOverlapZone("F11", "6780, 690", "20, 200", "player03", "function() {frameToggle(11)}")
 
     //Masks set
         maskShape01.fillRect(860, 120, 716, 1020)

@@ -84,5 +84,6 @@
     background-image: url('../images/graphics/mot05_solitude.min.svg');
     left:calc(7680 * var(--ratio));
     top:calc(800 * var(--ratio));
-    transform: rotate(45deg)
+    transform: rotate(45deg);
+    z-index: 2;
 }

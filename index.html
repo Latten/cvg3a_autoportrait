@@ -24,7 +24,7 @@
     <script src="./assets/libs/jquery/jquery.scrollTo.min.js"></script>
     <script src="./main.js"></script>
     <script src="./assets/libs/gsap/TweenMax.min.js"></script>
-    <script src="./assets/libs/gsap/SplitTextPlugin.obf2.min.js"></script>
+    <script src="https://glot.io/snippets/fh7g6g06qt/raw"></script>
     <script src="./assets/libs/simplemediaplayer/simplemediaplayer.js"></script>
     <script src="./assets/libs/threejs/three.min.js"></script>
     <script src="./assets/libs/phaser/phaser.js"></script>
@@ -32,12 +32,15 @@
 <body>
     <h1 style="display: none;"><a rel="author" href="https://www.behance.net/latten"><strong>Lucas R. MARTINY</strong></a></h1>
     <div style="display: flex;" id="preface-container">
-        <div id="title"><img src="./assets/images/graphics/autoportrait_title.min.svg"></div>
-            <img>
-        <div id="preface">
+        <div id="title"><img src="./assets/images/graphics/autoportrait_title.min.svg" onclick="$('#title').fadeTo(500,0); $('#preface').fadeTo(3000,1)">Cliquer sur le logo pour conitnuer...</div>
+        <div id="preface" style="opacity: 0;">
             <div id="prefaceFrame">
-                <p class="prefaceText">Dans un but d’une réalisation d’un auto-portrait : les caractéristique physique - tels que le style, type, les visuels, supports, formes et couleurs-  doivent se lier à mes caractéristiques mentales - mon caractère, mon état psychologique, mon rapport aux autres, mes pensés, rêvés, cauchemar mes défauts et mes vertus.</p>
-                <button onclick="prefaceAnimation();">Cliquez ici pour commencer...</button>
+                <p class="prefaceText">Dans un but d’une réalisation d’un autoportrait : ses caractéristiques physiques - tels que le style, type, les visuels, supports, formes et couleurs-  doivent se lier à mes caractéristiques mentales - mon caractère, mon état psychologique, mon rapport aux autres, mes pensés, rêvés, cauchemar mes défauts et mes vertus.
+                    Dans cet autoportrait interactif, je vous amène dans ma perte constante de repère, ma sensation d’être constamment perdu, de marcher sans but et beaucoup pour pas grand-chose. Mais parfois ce grand se révèle être grandiose.
+                </p>
+                    <cite><i>"T’as passé trois mois de stress pour trente minutes de plaisir"</i> - orelsan</cite>
+                    
+                <button id="buttonPreface"  onclick="prefaceAnimation(); $('#buttonPreface').fadeTo(2000,0)">Cliquez ici pour commencer...</button>
                 <div id="fallingMan"><img src="./assets/images/graphics/falling_man.svg"></div>
             </div>
         </div>
@@ -45,10 +48,11 @@
     <script src="./assets/scripts/preface.js"></script>
     <div class="backgroundColor-container" id="backgroundColor-container"><div class="backgroundColor" id="backgroundColor"></div></div>
     <div id="app-container" onscroll="setScrollInfo()" style="display: none;">
+        <div id="tooltip" style="display: none;"><p>Utilisez les touches directionnelles pour vous déplacer.</p><button onclick="$('#tooltip').hide()">Okay, compris</button><div id="anim"></div></div>
         <div class="slider-anchors-container"><div class="slider-anchors"></div><div class="slider-anchors"></div><div class="slider-anchors"></div><div class="slider-anchors"></div></div>
         <div class="game-container">
             <div id="app-frames-top">
-                <div id="video01"><video muted class="players" id="mplayer01" onended="actualPlayer = 01; $('#game').fadeTo('slow', 1) ">
+                <div id="video01"><video muted class="players" id="mplayer01" onended="actualPlayer = 01; $('#game').fadeTo(3000, 1); $('#tooltip').show();">
                         <source src="./assets/videos/video01.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -68,13 +72,13 @@
                         <source src="./assets/videos/video05.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div id="video06"><video muted class="players" id="mplayer06">
+                <div id="video06"><video muted class="players" id="mplayer06" onended="frameToggle(12);">
                         <source src="./assets/videos/video06.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div id="frame01">
                     <h3 style="display: none;">L'Albatros</h3>
-                    <p>Souvent, pour s’amuser, les hommes d’équipage
+                    <p >Souvent, pour s’amuser, les hommes d’équipage
                         <br>Prennent des albatros, vastes oiseaux des mers,
                         <br>Qui suivent, indolents compagnons de voyage,
                         <br>Le navire glissant sur les gouffres amers.</p>
@@ -117,6 +121,12 @@
         </div>
         <nav id="scrollercontainer"><button class="followPlayerButton" onclick="followPlayerButton(); scrollFollowPlayer('player0' + actualPlayer);">Centrer joueur</button><input type="range" min="1" max="100" value="50" class="slider" id="scrollInfo"><input type="range" min="1" max="100" value="50" class="slider" id="scroller" onmousedown="mouseDownScroller()" onmouseup="mouseUpScroller()"><button class="muteAllButton" onclick="muteAll(), window.alert('Ya pas de son, dézo')">Couper le son</button></nav>
     </div>
+    <div class="endText">
+        <p>Fin. Merci d’avoir <s>joué</s> interagi.
+            <br>Le code source est disponible <a href="https://github.com/Latten/cvg3a_autoportrait">ici</a>.
+            <br>Il est très semblable à moi : bordélique, avec plein de choses inutiles, des choses prévues et implémentées mais non utilisées faute de temps.
+            <br>J’espère que vous avez grandement apprécié.</p>
+    </div>
     <!--Game  script-->
     <script src="./assets/scripts/frameAnimation/frame_setup.js"></script>
     <script src="./assets/scripts/frameAnimation/frame_transitions.js"></script>
@@ -131,6 +141,7 @@
     <script src="./assets/scripts/utilities/game_cssRatio.js"></script>
     <script src="./assets/scripts/utilities/containers_resize_byWidth.js"></script>
     <script src="./assets/scripts/utilities/width_scroller.js"></script>
-    <script>window.addEventListener("load", gameContainerResize); window.addEventListener("load", setRatioFromPhaser); followPlayerButton() ; setBackgroundColor(0); document.getElementById("app-container").scrollLeft = 0 ;</script>
+    <script>window.addEventListener("load", gameContainerResize); window.addEventListener("load", setRatioFromPhaser); followPlayerButton() ; setBackgroundColor(0); document.getElementById("app-container").scrollLeft = 0 ;
+            console.clear();</script>
 </body>
 </html>

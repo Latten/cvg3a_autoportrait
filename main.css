@@ -57,7 +57,7 @@ body {
 }
 .backgroundColor.end{
     transition: ease 0.8s;
-    color: #000000;
+    background-color: #000000;
     z-index: 3;
 }
 
@@ -270,6 +270,7 @@ body {
 .prefaceText {
     display: inline-block;
     width: 90%;
+    margin-top: 20px;
     position: relative;
     font-size: 1em;
     line-height: 1.5em;
@@ -279,7 +280,6 @@ body {
 }
 #prefaceFrame {
     
-    background-color: pink;
     width: 500px;
     height: 80%;
     position: relative ;
@@ -287,7 +287,7 @@ body {
     top: 10%;
     color: black;
     border: solid #000000 2px;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 #preface {
     width: 100%;
@@ -298,24 +298,144 @@ body {
 
 #prefaceFrame button {
     background-color: #00000000;
+    position: relative;
+    width: 80%;
+    height: 50px;
+    bottom: 50px;
     border: none;
+    border: 2px solid #000000;
+    border-radius: 10px;
     font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
     font-size: 1em;
 }
 
 #fallingMan {
-    width: 100px;
-    height: 100px;
+    width: 70%;
+    height: 70%;
     position: absolute;
-    top: 50px;
-    left: calc(50% - 50px);
-    background-color: red;
+    top: -70%;
+    left: 15%;
+    transition: ease-in 2s;
+    transition-property: top;
 }
 
 #fallingMan.falling {
-    width: 20%;
+    top: 120%;
+    transition: ease-in 2s;
+    transition-property: top;
 }
 
 #title {
-    width: 20%;
+    position: absolute;;
+    width: 40%;
+    height: 40%;
+    left: 30%;
+    top: 20%;
+    z-index: 3;
+    line-height: 1em;
+    text-align: center;
+    font-weight: 300;
 }
+
+cite {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    position: relative;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: center;
+    color: black;
+    z-index: 2;
+}
+cite i {
+    font-style: italic;
+}
+
+.endText {
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    z-index: 5;
+}
+
+.endText p {
+    z-index: 5;
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0px;
+    line-height: 2em;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.endText a {
+    color: #ffffff;
+}
+
+#tooltip {
+    position: absolute;
+    display: block;
+    left: 5%;
+    bottom: 90px;
+    width: 330px;
+    height: 50px;
+    padding: 10px;
+    padding-left: 120px;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 7px;
+}
+#tooltip p {
+    display: flex;
+    color: #ffffff;
+    font-size: 0.8em;
+    line-height: 2em;
+    z-index: 2;
+    border: none;
+}
+#tooltip button {
+    display: flex;
+    background-color: #000000;
+    color: #ffffff;
+    position: inline-block;
+    height: 25px;
+    border: none;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+    font-size: 0.8em;
+    z-index: 5;
+    line-height: 1.8em;
+}
+
+#tooltip button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+#tooltip #anim{
+    width: 72px;
+    height: 50px;
+    position: relative;
+    left: -100px;
+    bottom: +50px;
+    background : url("./assets/images/icons/tooltip_keyboard_buttons.min.svg");
+    background-size: cover;
+    background-position-x: 0px;
+    animation: keybutton 1s steps(2) infinite;
+    filter: invert(100%);
+}
+@keyframes keybutton {
+    0% { background-position:    0px; }
+    100% { background-position: -148px; }
+  }

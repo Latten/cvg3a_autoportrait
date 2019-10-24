@@ -11,8 +11,8 @@
 }
   
 .pace .pace-progress {
-    background-color: rgba(0, 0, 0, 0.19999999999999996);
-    position: fixed;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
     z-index: -1;
     top: 0;
     right: 100%;

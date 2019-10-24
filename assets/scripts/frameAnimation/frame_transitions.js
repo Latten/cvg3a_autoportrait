@@ -7,6 +7,7 @@ function frameToggle(frameNumber) {
         player01.visible = false;
         actualPlayer = null;
         player01.setVelocityX(0);
+        $('#tooltip').hide();
         SMPplay("mplayer02");
     }
     if (frameNumber == 2 && frameNumberDone02 == null) {
@@ -77,5 +78,14 @@ function frameToggle(frameNumber) {
         SMPplay("mplayer06");
         setBackgroundColor(0); setBorder(0);
         actualPlayer = null;
+    }
+    if (frameNumber == 12 && frameNumberDone12 == null) {
+        frameNumberDone12 = true;
+        player03.visible = false;
+        document.getElementById('backgroundColor').classList.add('end');
+        document.getElementById('backgroundColor-container').classList.add('end');
+        $('#app-container').hide()
+        $(".endText").show();
+        game.pause()
     }
 }
