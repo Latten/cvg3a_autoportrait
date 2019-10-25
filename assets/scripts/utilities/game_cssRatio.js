@@ -16,7 +16,7 @@ function setRatioFromPhaser() {
     SMPresizeByPhaser();
     }
     else {
-        document.documentElement.style.setProperty('--ratio', "1")
+        document.documentElement.style.setProperty('--ratio', "1px")
     };
     if (ratioTimer != null) {
     wait(3);
