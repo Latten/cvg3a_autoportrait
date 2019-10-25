@@ -28,11 +28,19 @@
     <script src="./assets/libs/simplemediaplayer/simplemediaplayer.js"></script>
     <script src="./assets/libs/threejs/three.min.js"></script>
     <script src="./assets/libs/phaser/phaser.js"></script>
+    <!--Preload-->
+    <link rel="preload" href="./assets/videos/video01.mp4" as="video">
+    <link rel="preload" href="./assets/videos/video02.mp4" as="video">
+    <link rel="preload" href="./assets/videos/video03.mp4" as="video">
+    <link rel="preload" href="./assets/videos/video04.mp4" as="video">
+    <link rel="preload" href="./assets/videos/video05.mp4" as="video">
+    <link rel="preload" href="./assets/videos/video06.mp4" as="video">
+    
 </head>
 <body>
     <h1 style="display: none;"><a rel="author" href="https://www.behance.net/latten"><strong>Lucas R. MARTINY</strong></a></h1>
     <div style="display: flex;" id="preface-container">
-        <div id="title"><img src="./assets/images/graphics/autoportrait_title.min.svg" onclick="$('#title').fadeTo(500,0); $('#preface').fadeTo(3000,1)">Cliquer sur le logo pour conitnuer...</div>
+        <div id="title"><img src="./assets/images/graphics/autoportrait_title.min.svg" onclick="$('#title').fadeTo(500,0); $('#preface').fadeTo(3000,1)">Cliquer sur le logo pour continuer.</div>
         <div id="preface" style="opacity: 0;">
             <div id="prefaceFrame">
                 <p class="prefaceText">Dans un but d’une réalisation d’un autoportrait : ses caractéristiques physiques - tels que le style, type, les visuels, supports, formes et couleurs-  doivent se lier à mes caractéristiques mentales - mon caractère, mon état psychologique, mon rapport aux autres, mes pensés, rêvés, cauchemar mes défauts et mes vertus.
@@ -48,7 +56,7 @@
     <script src="./assets/scripts/preface.js"></script>
     <div class="backgroundColor-container" id="backgroundColor-container"><div class="backgroundColor" id="backgroundColor"></div></div>
     <div id="app-container" onscroll="setScrollInfo()" style="display: none;">
-        <div id="tooltip" style="display: none;"><p>Utilisez les touches directionnelles pour vous déplacer.</p><button onclick="$('#tooltip').hide()">Okay, compris</button><div id="anim"></div></div>
+        <div id="tooltip" style="display: none;"><p>Utilisez les touches directionnelles pour vous déplacer.</p><div id="anim"></div></div>
         <div class="slider-anchors-container"><div class="slider-anchors"></div><div class="slider-anchors"></div><div class="slider-anchors"></div><div class="slider-anchors"></div></div>
         <div class="game-container">
             <div id="app-frames-top">
