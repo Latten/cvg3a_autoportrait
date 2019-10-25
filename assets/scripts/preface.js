@@ -1,13 +1,13 @@
-var prefaceText = $('.prefaceText');
-var prefaceAll = $('.preface');
+var prefaceText = $('#prefaceText');
+var prefaceAll = $('#preface');
 function prefaceAnimation() {
 	//Play character fall
 	// $('#prefaceCharacter').classList.add('fall') ;
 	document.getElementById('fallingMan').classList.add('falling');
 	wait(500);
-	$('.preface').hide(200);
-	$('.preface-conatiner').hide(200);
-	prefaceAll.document.style.setProperty('display', 'none')
+	$('#preface').hide(200);
+	$('#preface-conatiner').hide(200);
+	prefaceAll.style.setProperty('display', 'none')
 	$('#app-container').show();
 	tl.clear();
 		clearInterval(startInterval );
