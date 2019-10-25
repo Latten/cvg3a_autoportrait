@@ -1,8 +1,9 @@
 
-/*
+
 :root {
+    --ratio : 1px
 }
-*/
+
 #preface-container {
     display: flex;
     position: absolute;
