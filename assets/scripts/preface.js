@@ -10,7 +10,7 @@ function prefaceAnimation() {
 	//Play character fall
 	// $('#prefaceCharacter').classList.add('fall') ;
     document.getElementById('fallingMan').classList.add('falling');
-	$('.prefaceText').hide(200);
+	$('.preface').hide(200);
 	$('#app-container').show();
 	tl.clear();
 	clearInterval(startInterval );
