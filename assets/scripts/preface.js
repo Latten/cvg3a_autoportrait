@@ -1,10 +1,4 @@
 var prefaceText = $('.prefaceText');
-var tl = new TimelineMax({
-	delay: 0,
-	yoyo: false,
-	repeat: 0,
-	repeatDelay: 0,
-})
 
 function prefaceAnimation() {
 	//Play character fall
