@@ -6,18 +6,14 @@ function prefaceAnimation() {
 	document.getElementById('fallingMan').classList.add('falling');
 	wait(500);
 	$('#preface').hide(200);
-	$('#preface-conatiner').hide(200);
-	prefaceAll.style.setProperty('display', 'none')
+	$('#preface-container').fadeTo(400, 0)
+	$('#preface-container').hide(200);
 	$('#app-container').show();
-	tl.clear();
-		clearInterval(startInterval );
-		$('#preface-container').fadeTo(400, 0)
-		$('#preface-container').hide(400) ;
-		$('#preface').hide(400) ;
-	wait(500); followPlayerButton() ; 
+	wait(500); 
+	followPlayerButton() ; 
 	setBackgroundColor(0); 
 	document.getElementById('app-container').scrollLeft = 0 ; 
-	$('#game').fadeTo(0, 0); wait(700); 
+	$('#game').fadeTo(0, 0.5); wait(700); 
 	gameContainerResize(); 
 	setRatioFromPhaser(); SMPplay('mplayer01');
 }
