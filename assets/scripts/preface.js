@@ -1,11 +1,11 @@
 var prefaceText = $('.prefaceText');
-
+var prefaceAll = $('.preface');
 function prefaceAnimation() {
 	//Play character fall
 	// $('#prefaceCharacter').classList.add('fall') ;
-    document.getElementById('fallingMan').classList.add('falling');
+	document.getElementById('fallingMan').classList.add('falling');
+	wait(500);
 	$('.preface').hide(200);
-	prefaceAll = $('.preface');
 	prefaceAll.style.display = "none";
 	$('#app-container').show();
 	tl.clear();
