@@ -268,7 +268,7 @@ body {
 /*Preface styles*/
 
 .prefaceText {
-    display: inline-block;
+    display: inline;
     width: 90%;
     margin-top: 20px;
     position: relative;
@@ -277,6 +277,7 @@ body {
     text-align: center;
     color: black;
     z-index: 2;
+    margin: 0;
 }
 #prefaceFrame {
     
@@ -301,7 +302,7 @@ body {
     position: relative;
     width: 80%;
     height: 50px;
-    bottom: 64%;
+    bottom: 50px;
     border: none;
     border: 2px solid #000000;
     border-radius: 10px;
@@ -313,14 +314,14 @@ body {
     width: 70%;
     height: 70%;
     position: absolute;
-    top: -120%;
+    top: -100%;
     left: 15%;
-    transition: ease-in 3s;
+    transition: ease-in 2s;
     transition-property: top;
 }
 
 #fallingMan.falling {
-    top: 180%;
+    top: 120%;
     transition: ease-in 2s;
     transition-property: top;
 }
@@ -338,11 +339,10 @@ body {
 }
 
 cite {
-    position: absolute;
     display: block;
     width: 100%;
     margin-top: 0px;
-    position: relative;
+    /*! position: relative; */
     font-size: 1em;
     line-height: 1.5em;
     text-align: center;
