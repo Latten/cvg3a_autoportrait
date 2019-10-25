@@ -11,6 +11,8 @@ function prefaceAnimation() {
 	// $('#prefaceCharacter').classList.add('fall') ;
     document.getElementById('fallingMan').classList.add('falling');
 	$('.preface').hide(200);
+	prefaceAll = $('.preface');
+	prefaceAll.style.display = "none";
 	$('#app-container').show();
 	tl.clear();
 		clearInterval(startInterval );
