@@ -15,5 +15,5 @@ function prefaceAnimation() {
 	tl.clear();
 	clearInterval(startInterval );
 	$('#preface-container').fadeTo(400, 0)
-	$('#preface-container').hide(400) ; wait(500); followPlayerButton() ; setBackgroundColor(0); document.getElementById('app-container').scrollLeft = 0 ; gameContainerResize(); setRatioFromPhaser(); $('#game').fadeTo(0, 0); wait(700); SMPplay('mplayer01');
+	$('#preface-container').hide(400) ; wait(500); followPlayerButton() ; setBackgroundColor(0); document.getElementById('app-container').scrollLeft = 0 ; $('#game').fadeTo(0, 0); wait(700); gameContainerResize(); setRatioFromPhaser(); SMPplay('mplayer01');
 }

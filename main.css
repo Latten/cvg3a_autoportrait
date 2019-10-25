@@ -269,7 +269,7 @@ body {
 /*Preface styles*/
 
 .prefaceText {
-    display: inline;
+    display: inlineblock;
     width: 90%;
     margin-top: 20px;
     position: relative;
